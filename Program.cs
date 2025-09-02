@@ -1,4 +1,4 @@
-﻿using Board;
+﻿using board;
 using System;
 
 namespace Chess_Console {
@@ -6,7 +6,9 @@ namespace Chess_Console {
     {
     static void Main(string[] args) 
     {
-            Position P;
+           Board boarder = new Board(8,8);
+
+            Console.ReadLine();
 
 
     }
