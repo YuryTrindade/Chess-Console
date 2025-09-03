@@ -7,22 +7,24 @@ namespace Chess_Console {
     {
     static void Main(string[] args) 
     {
+
+            //ChessPosition pos = new ChessPosition('c', 7);
+            //Console.WriteLine(pos.toPosition());
+            //Console.ReadLine();
             try
             {
-                Board boarder = new Board(8, 8);
+               ChessGame game = new ChessGame();
 
-                boarder.putPiece(new Tower(boarder, Color.Black), new Position(0, 0));
-                boarder.putPiece(new Tower(boarder, Color.Black), new Position(1, 3));
-                boarder.putPiece(new King(boarder, Color.Black), new Position(3, 6));
 
-                Screen.PrintBoard(boarder);
-
-                Console.ReadLine();
+                Screen.PrintBoard(game.boarder);
 
             }
-            catch (BoardException e) {
+            catch (BoardException e)
+            {
                 Console.WriteLine(e.Message);
             }
-    }
+
+
+        }
     }
 }
