@@ -7,7 +7,7 @@ namespace Chess_Console
     {
         public static void PrintBoard(Board boarder)
         {
-            for (int i = 0; i<boarder.row; i++) {
+            for (int i = 0; i<boarder.rows; i++) {
                 for (int j = 0; j < boarder.columns; j++)
                 {
                     if (boarder.piece(i, j)==null)

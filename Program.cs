@@ -7,17 +7,22 @@ namespace Chess_Console {
     {
     static void Main(string[] args) 
     {
-           Board boarder = new Board(8,8);
+            try
+            {
+                Board boarder = new Board(8, 8);
 
-            boarder.putPiece(new Tower(boarder, Color.Black), new Position(0, 0));
-            boarder.putPiece(new Tower(boarder, Color.Black), new Position(1, 3));
-            boarder.putPiece(new King(boarder, Color.Black), new Position(3, 6));
+                boarder.putPiece(new Tower(boarder, Color.Black), new Position(0, 0));
+                boarder.putPiece(new Tower(boarder, Color.Black), new Position(1, 3));
+                boarder.putPiece(new King(boarder, Color.Black), new Position(3, 6));
 
-            Screen.PrintBoard(boarder);
+                Screen.PrintBoard(boarder);
 
-            Console.ReadLine();
+                Console.ReadLine();
 
-
+            }
+            catch (BoardException e) {
+                Console.WriteLine(e.Message);
+            }
     }
     }
 }
